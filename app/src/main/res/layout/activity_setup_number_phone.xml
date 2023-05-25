@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp"
+    tools:context=".SetupNumberPhone">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almost there"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="30dp"/>
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/number_phone"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"/>
+
+    <ImageView
+        android:layout_width="450dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:src="@drawable/setup_number_phone"
+        android:layout_marginTop="-140dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:paddingLeft="10dp"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:inputType="number"
+        android:hint="Your phone number here"
+        android:background="@drawable/button_number1"
+        android:drawableLeft="@drawable/phone"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btnNumber"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:text="Save Number"
+        android:background="@drawable/button_number"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"/>
+
+
+
+</LinearLayout>

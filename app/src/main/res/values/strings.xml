@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Travel.in</string>
+    <string name="ket_travelin">Travel.in is a online booking service for Minibus transportation. login now to user Travel.in services.</string>
+    <string name="login">Sign up with Google</string>
+    <string name="number_phone">Fill your phone number below, so we can easily catch you up.</string>
+    <string name="finish_registrasi">You’re all set and ready to use Travel.in. Enjoy our service!</string>
+</resources>
