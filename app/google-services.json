@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "78233747957",
+    "firebase_url": "https://traveln-3cb4f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "traveln-3cb4f",
+    "storage_bucket": "traveln-3cb4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78233747957:android:1d422ca3fdce060e4520bc",
+        "android_client_info": {
+          "package_name": "com.example.travelin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78233747957-tid2rio7icehcqr5m8eq323i9jua2m3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD99MgsrZ_DNffH0r6RTneEz1ikqzkSWIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78233747957-tid2rio7icehcqr5m8eq323i9jua2m3g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
