@@ -114,12 +114,6 @@ public class FinishRegistration extends AppCompatActivity {
                                             });
                                         }
                                     }
-                                }).addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(FinishRegistration.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                        finish();
-                                    }
                                 });
                     }
                 });

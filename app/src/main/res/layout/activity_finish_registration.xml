@@ -48,7 +48,7 @@
         android:hint="Masukan Password"
         android:textColorHint="#060606"
         android:textColor="#000000"
-        android:inputType="textEmailAddress" />
+        android:inputType="textPassword" />
     <EditText
         android:id="@+id/et_confirmpassword"
         android:layout_width="350dp"
@@ -58,7 +58,7 @@
         android:hint="Masukan Confirm Password"
         android:textColorHint="#060606"
         android:textColor="#000000"
-        android:inputType="textEmailAddress" />
+        android:inputType="textPassword" />
 
 
     <Button

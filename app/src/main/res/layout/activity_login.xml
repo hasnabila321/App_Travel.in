@@ -50,7 +50,7 @@
         android:hint="Masukan Password"
         android:textColorHint="#060606"
         android:textColor="#000000"
-        android:inputType="textEmailAddress" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btn_login"

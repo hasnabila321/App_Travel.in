@@ -13,6 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -21,16 +26,23 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity {
     //Deklarasi Variabel
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
+
     private EditText et_email, et_password;
     private Button btnlogin, btnregister, btngoogle;
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener Listener;
     private String getEmail, getPassword;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(this,gso);
 
         //Inisialisasi Widget
         et_email = findViewById(R.id.et_email);
@@ -113,10 +125,28 @@ public class login extends AppCompatActivity {
         btngoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(login.this, Home.class);
-                startActivity(intent);
+                signIn();
+            }
+
+            private void signIn() {
+                Intent signtInIntent = gsc.getSignInIntent();
+                startActivityForResult(signtInIntent,1000);
             }
         });
 
+        }
+
+        @Override
+        protected void onActivityResult(int requestCode, int resultCode,Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            if(requestCode == 1000) {
+                Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+
+                try {
+                    task.getResult(ApiException.class);
+                }catch (ApiException e) {
+                    Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_SHORT).show();
+                }
+            }
         }
     }
